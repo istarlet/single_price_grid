@@ -1,1 +1,1 @@
-# single_price_grid
+# Frontend Mentor | Single Price Grid
