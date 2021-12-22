@@ -1,10 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 body {
     margin: 0;
     font-family: 'Karla', sans-serif;
 }
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    width: 80%;
+    max-width: 1100px;
+    margin: 5em auto;
+}
+
+.grid-container {
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-columns: 1fr;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    column-gap: 1em;
+}
+
+/* Font Styles */
 
 .karla-400 {
     font-weight: 400;
@@ -14,24 +43,82 @@ body {
     font-weight: 700;
 }
 
+.fs-14 {
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.fs-15 {
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.fs-18 {
+    font-size: 18px;
+}
+
+.fs-20 {
+    font-size: 20px;
+}
+
+.fs-32 {
+    font-size: 32px;
+}
+
+.lh-20 {
+    line-height: 20px;
+}
+
+.lh-26 {
+    line-height: 26px;
+}
+
+/* Font Styles End */
+
 /* Primary Colors */
 .cyan {
-    color:hsl(179, 62%, 43%);
+    color:hsla(179, 62%, 43%, 1);
+}
+
+.light-cyan {
+    color: hsla(179, 59%, 45%, 1);
 }
 
 .bright-yellow {
-    color:hsl(71, 73%, 54%);
+    color:hsla(71, 73%, 54%, 1);
 }
 
 /* Neutral Colors */
+
+.whitish {
+    color: hsla(0, 0%, 100%, 1);
+}
 
 .light-gray {
     color: hsl(204, 43%, 93%);
 }
 
 .grayish-blue {
-    color: hsl(218, 22%, 67%);
+    color: hsla(218, 22%, 67%, 1);
 }
+
+/* Neutral Colors End */
+
+/* Monthly Subscription Styles */
+
+.monthly__container {
+    background-color:hsla(179, 62%, 43%, 1);
+}
+
+/* Monthly Subscription Styles End */
+
+/* Why Us Styles */
+
+.whyus__container {
+    background-color: hsla(179, 59%, 45%, 1);
+}
+
+/* Why Us Styles */
 
 /* Frontend Mentor Styles */
 .attribution { 
