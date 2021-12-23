@@ -9,6 +9,8 @@
 body {
     margin: 0;
     font-family: 'Karla', sans-serif;
+    background-color:hsla(218, 22%, 67%, 1);
+    background-color: #efeff6;
 }
 
 img {
@@ -17,15 +19,10 @@ img {
 
 .container {
     width: 80%;
-    max-width: 1100px;
+    max-width: 650px;
     margin: 5em auto;
 }
 
-.grid-container {
-    display: grid;
-    grid-auto-flow: row;
-    grid-auto-columns: 1fr;
-}
 
 .row {
     display: flex;
@@ -104,11 +101,70 @@ img {
 
 /* Neutral Colors End */
 
+/* Single Price CSS Grid Styles */
+.singleprice__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "community" 
+      "subscription"
+      "why-us";
+  }
+
+  #community {
+      grid-area: community;
+  }
+
+  #subscription {
+      grid-area: subscription;
+  }
+
+  #why-us {
+      grid-area: why-us;
+  }
+
+/* Community Styles */
+
+.community__container {
+    background-color:hsla(0, 0%, 100%, 1);
+    padding: 2em;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
 /* Monthly Subscription Styles */
 
 .monthly__container {
     background-color:hsla(179, 62%, 43%, 1);
+    padding: 2em;
+    border-bottom-left-radius: 0px;
 }
+
+/* Button Styles */
+
+.btn {
+    background-color: hsla(71, 73%, 54%, 1);
+    color:hsla(0, 0%, 100%, 1);
+    padding: 12px 27px;
+    border-radius: 5px;
+    border: none;
+    border: solid 2px transparent;
+    transition: background-color 0.3s;
+    display: block;
+    width: 100%;
+}
+
+.btn:hover {
+    cursor: pointer;
+    border: solid 2px #ffffff;
+    color: #ffffff;
+    border: solid 2px #ffffff;
+    padding: 12px 57px;
+    display: block;
+    width: 100%;
+  }
+
+/* Button Styles End */
 
 /* Monthly Subscription Styles End */
 
@@ -116,6 +172,9 @@ img {
 
 .whyus__container {
     background-color: hsla(179, 59%, 45%, 1);
+    padding: 2em;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 /* Why Us Styles */
@@ -129,3 +188,21 @@ img {
 }
 
 /* Media Queries */
+@media screen and (min-width: 700px) {
+    .singleprice__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+          "community community" 
+          "subscription why-us";
+      }
+
+    .monthly__container {
+        border-bottom-left-radius: 10px;
+    }
+
+    .whyus__container {
+        border-bottom-left-radius: 0px;
+    }
+}
+  
